@@ -37,8 +37,6 @@ class WordFinder(QMainWindow):
 		self.setWindowFlags(Qt.MSWindowsFixedSizeDialogHint) #| Qt.WindowStaysOnTopHint)
 		#self.setStyleSheet("background-color: #fffeea")
 		
-		self.setAcceptDrops(True)
-		
 		centralWidget = QWidget(self)
 		self.setCentralWidget(centralWidget)
 		windowLayout = QFormLayout()

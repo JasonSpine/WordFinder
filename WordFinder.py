@@ -58,15 +58,11 @@ class WordFinder(QMainWindow):
 		
 		self.findButton = QPushButton("Find!")
 		self.findButton.clicked.connect(self.findWords)
-		self.charactersEdit.returnPressed.connect(self.findWords)
-		#self.charCountEdit.returnPressed.connect(self.findWords)
 		
 		windowLayout.addRow("Word characters", self.charactersEdit)
 		windowLayout.addRow("Word characters count", self.charCountEdit)
 		windowLayout.addRow("Confirm", self.findButton)
 		windowLayout.addRow("Output", self.outputArea)
-		
-		#self.setGeometry(20, 50, 4, 4)
 	
 	def charactersEditTextChanged(self, text):
 		l = len(text)

@@ -20,6 +20,10 @@ from PyQt5.QtCore import (
 	Qt,
 )
 
+from PyQt5.QtGui import (
+	QFont,
+)
+
 def filter_words(dictionary_file, char_set, char_count):
 	char_counts = Counter(char_set)
 	filtered_words = []
@@ -35,7 +39,7 @@ class WordFinder(QMainWindow):
 		super().__init__()
 		self.setWindowTitle("Word Finder")
 		self.setWindowFlags(Qt.MSWindowsFixedSizeDialogHint) #| Qt.WindowStaysOnTopHint)
-		#self.setStyleSheet("background-color: #fffeea")
+		self.setStyleSheet("font-size: 16pt;")
 		
 		centralWidget = QWidget(self)
 		self.setCentralWidget(centralWidget)
@@ -50,9 +54,15 @@ class WordFinder(QMainWindow):
 		self.charactersEditTextChanged(self.charactersEdit.text())
 		self.charCountEdit.setValue(4)
 		
+		f = QFont("unexistent")
+		f.setStyleHint(QFont.Monospace)
+		f.setWeight(90)
+		#f.setPointSize(12)
+		
 		self.outputArea = QPlainTextEdit()
 		self.outputArea.setFixedHeight(550)
 		self.outputArea.setFixedWidth(300)
+		self.outputArea.setFont(f)
 		
 		self.findButton = QPushButton("Find!")
 		self.findButton.clicked.connect(self.findWords)

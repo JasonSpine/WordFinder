@@ -8,3 +8,5 @@ Anyway, rest assured, this executable and app code is not harmful for your PC...
 
 Tested with this dictionary: https://sjp.pl/sl/growy/   
 **You need to put a dictionary named "dictionary.txt" in the same directory as this app.**
+
+![App Screenshot](README_files/AppScreenshot.png)  
